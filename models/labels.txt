@@ -1,0 +1,6 @@
+marvin
+yes
+no
+stop
+go
+silence

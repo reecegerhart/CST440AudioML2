@@ -1,0 +1,19 @@
+{
+  "sample_rate": 16000,
+  "clip_samples": 16000,
+  "frame_length": 480,
+  "frame_step": 320,
+  "fft_length": 512,
+  "window": "hann (periodic)",
+  "magnitude": "abs(stft)",
+  "num_mel_bins": 40,
+  "lower_hz": 20.0,
+  "upper_hz": 7600.0,
+  "log": "natural log(mel + 1e-06)",
+  "input_shape": [
+    49,
+    40,
+    1
+  ],
+  "audio_scale": "int16 samples / 32768"
+}

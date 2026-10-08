@@ -1,0 +1,23 @@
+=== Test set (speakers never seen in training) ===
+Overall accuracy: 96.49%  (2472/2562 clips)
+
+class      clips  precision   recall      f1
+marvin       344      0.982    0.927   0.954
+yes          696      0.988    0.953   0.970
+no           657      0.903    0.992   0.946
+stop         684      0.997    0.981   0.989
+go            62      0.960    0.774   0.857
+silence      119      0.983    1.000   0.992
+
+Wake word 'marvin':
+  missed (false reject): 25 of 344 = 7.27%
+  woke up by mistake (false accept): 6 of 2218 = 0.27%
+
+Confusion matrix (rows = true word, columns = predicted word):
+           marvin     yes      no    stop      go silence
+marvin        319       2      20       1       1       1
+yes             3     663      29       0       0       1
+no              1       3     652       0       1       0
+stop            2       3       8     671       0       0
+go              0       0      13       1      48       0
+silence         0       0       0       0       0     119

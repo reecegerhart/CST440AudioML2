@@ -87,7 +87,7 @@ splits by speaker: 70% train, 15% validation, 15% test.
 | go | 350 | 80 | 62 | 492 |
 | silence | 593 | 119 | 119 | 831 |
 
-### 2. Train (optional, about 10-20 minutes on a laptop)
+### 2. Train (optional)
 
 ```powershell
 python train.py
@@ -132,7 +132,7 @@ A quiet microphone is the most common problem: very quiet speech is often heard 
 
 ---
 
-## Results (test set: 2,562 clips from speakers never seen in training)
+## Results (test set: 2,562 clips from speakers)
 
 | Model | Size | Test accuracy |
 |---|---|---|
@@ -178,7 +178,7 @@ and class weights balance the rest.
 
 ---
 
-## Handoff: quantization (int8) for the microcontroller
+## Handoff: quantization (int8) for microcontroller
 
 Everything needed is ready:
 
@@ -196,8 +196,7 @@ Everything needed is ready:
   ```
 
   Compare it with the 96.99% float baseline.
-- For the board, write the int8 model as a C array (`model_data.h`, same as
-  `write_c_header()` in the trig project's `modelRAD.py`).
+- For the board, write the int8 model as a C array 
 
 **On the board**, the features must match `models/features.json` exactly: 16 kHz audio,
 480-sample Hann window, 320-sample step, 512-point FFT magnitude, 40 mel bands

@@ -2,3 +2,4 @@
 __pycache__/
 DataSet_clean/
 demo.wav
+arduino/build/
